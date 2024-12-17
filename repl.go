@@ -98,6 +98,11 @@ func getCommands(config *pokeapi.Config) map[string]cliCommand {
 			description: "Inspect a pokemon registered in the pokedex",
 			callback:    commandInspect,
 		},
+		"pokedex": {
+			name:        "pokedex",
+			description: "Lists all the pokemon you have registered in your pokedex",
+			callback:    commandPokedex,
+		},
 		"exit": {
 			name:        "exit",
 			description: "Exit the pokedex",

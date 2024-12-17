@@ -88,3 +88,15 @@ func commandInspect(config *pokeapi.Config, args ...string) error {
 	}
 	return nil
 }
+
+func commandPokedex(config *pokeapi.Config, args ...string) error {
+	if len(config.Pokedex) == 0 {
+		fmt.Println("Your pokedex is currently empty! Try catching some pokemon with the catch command.")
+		return nil
+	}
+	fmt.Println("Your Pokedex:")
+	for key, _ := range config.Pokedex {
+		fmt.Printf("  - %s\n", key)
+	}
+	return nil
+}

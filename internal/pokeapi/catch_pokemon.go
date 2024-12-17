@@ -15,6 +15,7 @@ func catch(pokemon Pokemon, config *Config) {
 	caught := value > random
 	if caught {
 		fmt.Printf("%s was caught!\n", pokemon.Name)
+		fmt.Println("You may now inspect it with the inspect command.")
 		_, ok := config.Pokedex[pokemon.Name]
 		if !ok {
 			config.Pokedex[pokemon.Name] = pokemon
